@@ -1,42 +1,31 @@
+import json, joblib
+import numpy as np
 from fastapi import FastAPI
 from pydantic import BaseModel
-import joblib
-from pathlib import Path
-import os
 
-app = FastAPI(title='Riesgo Corrupción Obras Públicas - API')
+app = FastAPI()
+pipe = joblib.load("models/pipeline.pkl")
+meta = json.load(open("models/pipeline_meta.json"))
+THR = meta.get("best_threshold_f1", 0.5)
 
-MODEL_PATH = Path(os.getenv('MODEL_PATH', 'models/rf_baseline.pkl'))
-_model = None
+class Item(BaseModel):
+    # incluye aquí las columnas que espera el pipeline
+    # ejemplo:
+    SECTOR: str | None = None
+    # ...
+    # (o usa dict[str, Any] si vas a pasar variable el esquema)
+    pass
 
-class ObraRequest(BaseModel):
-    # Agregar aquí los principales features que use el modelo (ejemplos)
-    valor_referencial: float | None = None
-    plazo_meses: float | None = None
-    nro_participantes: int | None = None
-    tipo_contratacion: str | None = None
+@app.post("/predict_proba")
+def predict_proba(payload: dict):
+    X = [payload]  # una fila
+    proba = pipe.predict_proba(X)[0][1]
+    return {"proba": float(proba), "threshold": THR, "riesgoso": proba >= THR}
 
-def load_model():
-    global _model
-    if _model is None and MODEL_PATH.exists():
-        _model = joblib.load(MODEL_PATH)
-    return _model
-
-@app.get('/health')
-def health():
-    return {'status': 'ok'}
-
-@app.post('/predict')
-def predict(item: ObraRequest):
-    model = load_model()
-    if model is None:
-        return {'error': f'Modelo no encontrado en {MODEL_PATH}'}
-    # Construir vector en el mismo orden que el entrenamiento (ejemplo simple)
-    # En producción, usar un preprocesador persistido (OneHotEncoder/ColumnTransformer, etc.)
-    features = [[
-        item.valor_referencial or 0.0,
-        item.plazo_meses or 0.0,
-        item.nro_participantes or 0,
-    ]]
-    pred = model.predict(features)[0]
-    return {'riesgo': int(pred)}
+@app.post("/predict_batch")
+def predict_batch(payload: list[dict]):
+    import pandas as pd
+    X = pd.DataFrame(payload)
+    probas = pipe.predict_proba(X)[:, 1]
+    labels = (probas >= THR).astype(int)
+    return {"probas": probas.tolist(), "labels": labels.tolist(), "threshold": THR}
