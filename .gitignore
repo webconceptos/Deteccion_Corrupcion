@@ -5,9 +5,12 @@ __pycache__/
 .ipynb_checkpoints/
 *.pyc
 
-# Datos pesados o sensibles
+# Datos (mantén datos pesados fuera del repo)
 data/raw/
 *.zip
+
+# Notebooks con outputs pesados (opcional)
+*.nbconvert.ipynb
 
 # SO / IDE
 .DS_Store
