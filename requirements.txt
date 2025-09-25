@@ -1,0 +1,15 @@
+pandas
+numpy
+scikit-learn
+xgboost
+lightgbm
+shap
+fastapi
+uvicorn
+pydantic
+mlflow
+python-dotenv
+pyyaml
+joblib
+openpyxl
+pyarrow
