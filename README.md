@@ -2,6 +2,10 @@
 
 Sistema de **Machine Learning** que integra señales de **obra**, **empresa** y **miembro de comité** y etiqueta con la **Matriz de Priorización** para clasificar obras como **riesgosas (1)** o **no riesgosas (0)**.
 
+### Curso : Proyecto de Investigación II
+#### Integrantes: 
+    Hilario Aradiel
+    García Fernando
 ---
 
 ## Estructura del repositorio
