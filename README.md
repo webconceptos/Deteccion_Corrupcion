@@ -4,7 +4,7 @@ Sistema de **Machine Learning** que integra señales de **obra**, **empresa** y 
 
 ---
 
-## 📁 Estructura del repositorio
+## Estructura del repositorio
 
 ```
 DETECCION_CORRUPCION/
@@ -42,7 +42,7 @@ DETECCION_CORRUPCION/
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 - **Problema:** identificar **obras con riesgo de corrupción** a partir de información administrativa y de ejecución.
 - **Target:** `y_riesgo` (binario). En la versión actual se deriva principalmente de `OBRA_RIESGO` / `OBRA_RIESGO_DESC` (Matriz 1A/2A/3A) tras normalizar llaves (`CODIGO_UNICO` ↔ `COD_UNICO`/`CODIGO_OBRA`/`IDENTIFICADOR_OBRA`).
@@ -50,7 +50,7 @@ DETECCION_CORRUPCION/
 
 ---
 
-## 🔁 Reproducibilidad (Track B)
+## Reproducibilidad
 
 ### 1) Ingesta (copia a `data/raw/` + hash + log)
 ```bash
@@ -79,7 +79,7 @@ Ejecutar notebooks en orden:
 
 ---
 
-## 📊 Métricas y gráficos
+## Métricas y gráficos
 
 - **Validación:** **PR-AUC** (adecuada para desbalance), además de ROC-AUC y `classification_report`.
 - **Holdout:** 80/20 estratificado.
