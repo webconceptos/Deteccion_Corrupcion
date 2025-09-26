@@ -4,10 +4,12 @@ from datetime import datetime
 from pathlib import Path
 import logging
 
-BASE = Path(__file__).resolve().parents[0]
+BASE = Path(__file__).resolve().parents[1]
 RAW = BASE / "data" / "raw"
 LOG = BASE / "logs" / "ingest.log"
 REG = BASE / "data" / "datasets.json"
+
+print("BASE:", BASE)
 
 RAW.mkdir(parents=True, exist_ok=True)
 LOG.parent.mkdir(parents=True, exist_ok=True)
