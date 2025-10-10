@@ -5,7 +5,7 @@ env/
 ENV/
 .env/
 .ENV/
-
+frontend-predictor/node_modules/
 __pycache__/
 .ipynb_checkpoints/
 *.pyc
