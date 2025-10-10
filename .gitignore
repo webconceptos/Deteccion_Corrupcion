@@ -1,6 +1,11 @@
 # Python
 .venv/
 venv/
+env/
+ENV/
+.env/
+.ENV/
+
 __pycache__/
 .ipynb_checkpoints/
 *.pyc
