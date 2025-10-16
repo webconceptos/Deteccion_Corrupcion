@@ -1,8 +1,11 @@
 #!/usr/bin/env python
-import hashlib, json, shutil, sys
+import hashlib
+import json
+import logging
+import shutil
+import sys
 from datetime import datetime
 from pathlib import Path
-import logging
 
 BASE = Path(__file__).resolve().parents[1]
 RAW = BASE / "data" / "raw"
@@ -14,8 +17,10 @@ print("BASE:", BASE)
 RAW.mkdir(parents=True, exist_ok=True)
 LOG.parent.mkdir(parents=True, exist_ok=True)
 
-logging.basicConfig(filename=LOG, level=logging.INFO,
-                    format="%(asctime)s | %(levelname)s | %(message)s")
+logging.basicConfig(
+    filename=LOG, level=logging.INFO, format="%(asctime)s | %(levelname)s | %(message)s"
+)
+
 
 def sha256sum(p: Path) -> str:
     h = hashlib.sha256()
@@ -23,6 +28,7 @@ def sha256sum(p: Path) -> str:
         for chunk in iter(lambda: f.read(1 << 20), b""):
             h.update(chunk)
     return h.hexdigest()
+
 
 def main():
     if len(sys.argv) < 2:
@@ -54,6 +60,7 @@ def main():
 
     logging.info(f"INGESTED {dst.name} | {meta['bytes']} bytes | {meta['sha256']}")
     print("OK:", json.dumps(meta, indent=2))
+
 
 if __name__ == "__main__":
     main()

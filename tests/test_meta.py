@@ -1,5 +1,6 @@
-from pathlib import Path
 import json
+from pathlib import Path
+
 
 def test_meta_file_exists_and_has_keys():
     meta_path = Path("models/pipeline_meta.json")

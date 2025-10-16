@@ -1,6 +1,6 @@
-from functools import lru_cache
 import json
 import pickle
+from functools import lru_cache
 from pathlib import Path
 from typing import Any, Dict, Tuple
 
@@ -8,8 +8,12 @@ MODELS_DIR = Path("models")
 PIPELINE_PKL = MODELS_DIR / "pipeline.pkl"
 PIPELINE_META = MODELS_DIR / "pipeline_meta.json"
 
+
 class ModelNotFoundError(RuntimeError): ...
+
+
 class MetaNotFoundError(RuntimeError): ...
+
 
 @lru_cache(maxsize=1)
 def get_model_and_meta() -> Tuple[Any, Dict]:
