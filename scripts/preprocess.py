@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import logging
 from pathlib import Path
+
 import pandas as pd
 
 BASE = Path(__file__).resolve().parents[1]
@@ -11,10 +12,12 @@ LOG = BASE / "logs" / "preprocess.log"
 PROC.mkdir(parents=True, exist_ok=True)
 LOG.parent.mkdir(parents=True, exist_ok=True)
 
-logging.basicConfig(filename=LOG, level=logging.INFO,
-                    format="%(asctime)s | %(levelname)s | %(message)s")
+logging.basicConfig(
+    filename=LOG, level=logging.INFO, format="%(asctime)s | %(levelname)s | %(message)s"
+)
 
 OUT = PROC / "dataset_obras.parquet"
+
 
 def load_concat(glob_pattern: str) -> pd.DataFrame:
     frames = []
@@ -27,6 +30,7 @@ def load_concat(glob_pattern: str) -> pd.DataFrame:
             logging.error(f"Error reading {p.name}: {e}")
     return pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
 
+
 def basic_clean(df: pd.DataFrame) -> pd.DataFrame:
     # normaliza nombres
     df.columns = [c.strip().replace(" ", "_") for c in df.columns]
@@ -34,6 +38,7 @@ def basic_clean(df: pd.DataFrame) -> pd.DataFrame:
     if "codigo_unico" in df.columns:
         df = df.drop_duplicates(subset=["codigo_unico"], keep="last")
     return df
+
 
 def main():
     # ejemplo simple: solo obra ya consolidada (tu Notebook 02 hizo el enriquecido)
@@ -54,6 +59,7 @@ def main():
     df.to_parquet(OUT, index=False)
     logging.info(f"Saved {OUT.name} -> {df.shape}")
     print("OK:", OUT, df.shape)
+
 
 if __name__ == "__main__":
     main()
