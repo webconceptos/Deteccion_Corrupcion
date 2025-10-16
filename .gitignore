@@ -22,3 +22,16 @@ data/raw/
 Thumbs.db
 .vscode/
 .idea/
+
+
+.env
+.env.*
+/env/
+/.venv/
+__pycache__/
+*.pyc
+/data/raw/
+/logs/
+/models/*.pth
+/models/*.bin
+/models/*.onnx
