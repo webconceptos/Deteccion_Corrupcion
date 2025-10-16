@@ -1,7 +1,7 @@
 # 🏛️ Proyecto: Sistema de Detección de Riesgos de Corrupción en Obras Públicas
 
 **Universidad Nacional de Ingeniería – Maestría en Inteligencia Artificial**  
-**Autor:** Ing. Fernando García Aradiel  
+**Autor:** Fernando García - Aradiel Hilario
 **Versión:** 1.0 – Octubre 2025  
 **Repositorio:** [webconceptos/Deteccion_Corrupcion](https://github.com/webconceptos/Deteccion_Corrupcion)
 
