@@ -1,7 +1,9 @@
 from fastapi import APIRouter
+
 from src.api.deps import get_model_and_meta
 
 router = APIRouter(tags=["health"])
+
 
 @router.get("/health")
 def health():
@@ -10,6 +12,7 @@ def health():
         return {"status": "ok"}
     except Exception as e:
         return {"status": "error", "detail": str(e)}
+
 
 @router.get("/model_meta")
 def model_meta():
