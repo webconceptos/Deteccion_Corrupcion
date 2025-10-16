@@ -1,7 +1,7 @@
 # 🏗️ Sistema de Detección de Riesgos de Corrupción en Obras Públicas mediante Machine Learning
 
 **Repositorio Oficial – Tesis de Maestría UNI (2025)**  
-**Autor:** Ing. Fernando García (Webconceptos EIRL)  
+**Autor:** Fernando García - Hilario Aradiel
 **Proyecto:** *“Sistema de Identificación de Obras Públicas con Riesgo de Corrupción en el Perú”*  
 **Versión:** 1.0.0  
 **Última actualización:** Octubre 2025  
