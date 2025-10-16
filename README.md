@@ -159,7 +159,7 @@ Servicio disponible en: `http://localhost:8000/docs`
 ## 🧾 Licencia
 
 **MIT License**  
-© 2025 Webconceptos EIRL – Todos los derechos reservados.
+© 2025 Fernando García - Hilario Aradiel – Todos los derechos reservados.
 
 ---
 
