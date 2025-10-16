@@ -1,26 +1,30 @@
-import json, joblib
-import numpy as np
-from pydantic import BaseModel
+import json
+
+import joblib
+import pandas as pd
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-import pandas as pd
-
+from pydantic import BaseModel
 
 from src.api.deps import get_model_and_meta
-from src.api.schemas import BatchPredictRequest, PredictBatchResponse, PredictResponse
 from src.api.routes.health import router as health_router
+from src.api.schemas import BatchPredictRequest, PredictBatchResponse, PredictResponse
 
 app = FastAPI(title="Detección de Riesgos de Corrupción", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"],
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 app.include_router(health_router)
 
 pipe = joblib.load("models/pipeline.pkl")
 meta = json.load(open("models/pipeline_meta.json"))
 THR = meta.get("best_threshold_f1", 0.5)
+
 
 class Item(BaseModel):
     # incluye aquí las columnas que espera el pipeline
@@ -29,6 +33,7 @@ class Item(BaseModel):
     # ...
     # (o usa dict[str, Any] si vas a pasar variable el esquema)
     pass
+
 
 @app.post("/predict_proba", response_model=PredictBatchResponse, tags=["predict"])
 def predict_proba(req: BatchPredictRequest):
@@ -63,9 +68,11 @@ def predict_proba(req: BatchPredictRequest):
         )
     return PredictBatchResponse(resultados=resultados)
 
+
 @app.post("/predict_batch")
 def predict_batch(payload: list[dict]):
     import pandas as pd
+
     X = pd.DataFrame(payload)
     probas = pipe.predict_proba(X)[:, 1]
     labels = (probas >= THR).astype(int)
