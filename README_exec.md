@@ -85,7 +85,7 @@ Preprocesamiento → Entrenamiento → Exportación → API REST → Despliegue 
 
 ## 🧑‍💻 Autor y Licencia
 
-**Ing. Fernando García Aradiel** – Webconceptos EIRL  
+**Fernando García Aradiel- Hilario Aradiel **
 📧 fgarcia@webconceptos.com  
 **Licencia:** MIT License © 2025
 
