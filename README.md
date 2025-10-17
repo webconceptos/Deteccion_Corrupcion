@@ -2,6 +2,7 @@
 
 **Repositorio Oficial – Tesis de Maestría UNI (2025)**  
 **Autor:** Fernando García - Hilario Aradiel
+
 **Proyecto:** *“Sistema de Identificación de Obras Públicas con Riesgo de Corrupción en el Perú”*  
 **Versión:** 1.0.0  
 **Última actualización:** Octubre 2025  
