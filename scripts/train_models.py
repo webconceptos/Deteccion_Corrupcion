@@ -77,7 +77,7 @@ def main():
 
     # === Modelos ===
     models = {
-        "logreg": LogisticRegression(max_iter=200, class_weight="balanced"),
+        "logreg": LogisticRegression(max_iter=1000, class_weight="balanced", solver="lbfgs"),
         "rf": RandomForestClassifier(
             n_estimators=200, random_state=42, n_jobs=-1, class_weight="balanced_subsample"),
         "xgb": XGBClassifier(
@@ -131,4 +131,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-bios
