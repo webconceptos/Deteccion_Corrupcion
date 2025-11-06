@@ -1,163 +1,167 @@
-# Detección de Riesgos de Corrupción en Obras Públicas (Perú)
+# 🏗️ Sistema de Detección de Riesgos de Corrupción en Obras Públicas mediante Machine Learning
 
-Sistema de **Machine Learning** que integra señales de **obra**, **empresa** y **miembro de comité** y etiqueta con la **Matriz de Priorización** para clasificar obras como **riesgosas (1)** o **no riesgosas (0)**.
+**Repositorio Oficial – Tesis de Maestría UNI (2025)**  
+**Autor:** Fernando García - Hilario Aradiel
 
-### Curso : Proyecto de Investigación II
-#### Integrantes: 
-    Hilario Aradiel
-    García Fernando
+**Proyecto:** *“Sistema de Identificación de Obras Públicas con Riesgo de Corrupción en el Perú”*  
+**Versión:** 1.0.0  
+**Última actualización:** Octubre 2025  
+
 ---
 
-## Estructura del repositorio
+## 🎯 Objetivo del Proyecto
+
+Desarrollar un **Sistema Inteligente** que, a través de **Machine Learning**, permita **identificar Obras Públicas con riesgo potencial de corrupción** en el Perú, integrando datos de obras, empresas y funcionarios públicos.
+
+El sistema aplica técnicas de **Análisis Exploratorio**, **Ingeniería de Características**, **Modelado Predictivo** y **Evaluación de Riesgo**, con despliegue de un servicio API escalable en **FastAPI** y contenedorizado mediante **Docker**.
+
+---
+
+## 🧭 Metodología General
+
+| Fase | Descripción | Entregable |
+|------|--------------|------------|
+| 1. Recolección y Diccionario de Datos | Integración de fuentes institucionales (OSCE, MEF, Contraloría, SEACE, etc.). | Diccionario de Datos ML + Diccionario de Sistemas Fuente |
+| 2. Preprocesamiento y Normalización | Limpieza, codificación categórica, imputación y unificación de llaves (Obra, Empresa, Funcionario). | Dataset unificado `dataset_obras.parquet` |
+| 3. Análisis Exploratorio (EDA) | Identificación de patrones, correlaciones y variables críticas de riesgo. | Gráficos en `reports/figures/` |
+| 4. Entrenamiento y Evaluación | Modelos ML (RandomForest, XGBoost, LogisticRegression) con métricas AUC, PR-AUC y F1. | `models/pipeline.pkl` + `pipeline_meta.json` |
+| 5. Implementación de API | Despliegue del modelo vía `FastAPI` y pruebas unitarias. | `src/api/main.py` |
+| 6. Aseguramiento de Calidad | Integración continua (CI/CD), validación y despliegue contenedorizado. | Workflow GitHub Actions + Dockerfile |
+
+---
+
+## 🧱 Arquitectura del Sistema
 
 ```
-DETECCION_CORRUPCION/
-├─ data/
-│  ├─ raw/                  # datos fuente (solo lectura)
-│  ├─ interim/              # intermedios/temporales
-│  ├─ processed/            # dataset final para modelado (parquet)
-│  └─ external/             # fuentes externas (si aplica)
-├─ models/
-│  ├─ pipeline.pkl          # pipeline sklearn (preprocesamiento + modelo)
-│  └─ pipeline_meta.json    # metadatos (columnas, umbral, scores CV)
-├─ notebooks/
-│  ├─ 01_exploracion_diccionarios.ipynb
-│  ├─ 02_construir_dataset_maestro_final.ipynb
-│  ├─ 03_entrenamiento_evaluacion_final.ipynb
-│  └─ EDA_baseline.ipynb
-├─ reports/
-│  └─ figures/
-│     ├─ 01_target_dist.png
-│     ├─ 02_missing_top20.png
-│     ├─ 03_importance_perm.png
-│     ├─ 04_corr_heatmap.png
-│     └─ 05_top_categorias.png
-├─ scripts/
-│  ├─ ingest.py             # ingesta con hash y logging
-│  └─ preprocess.py         # limpieza mínima y verificación de processed
-├─ src/
-│  ├─ api/                  # FastAPI para servir el modelo
-│  ├─ config/ data/ features/ models/ utils/  # módulos auxiliares
-├─ tests/
-├─ .env / .env.example
-├─ README.md
-└─ requirements.txt
++-------------------------------------------+
+|        Detección de Riesgos de Corrupción |
++-------------------------------------------+
+|           FASTAPI (servicio REST)         |
+|    • /predict_proba   • /health           |
+|    • /model_meta      • /explain*         |
++-------------------------------------------+
+|      Pipeline ML (pickle + metadata)      |
+|    • dataset procesado                    |
+|    • columnas entrenadas                  |
+|    • umbral de decisión (F1)              |
++-------------------------------------------+
+|   Preprocesamiento & Feature Engineering  |
+|    • obras + empresas + funcionarios      |
+|    • codificación, escalado, limpieza     |
++-------------------------------------------+
+|     Fuentes Institucionales Integradas    |
+|  OSCE | MEF | SEACE | Contraloría | BID   |
++-------------------------------------------+
 ```
 
 ---
 
-## Objetivo
+## 🗂️ Estructura del Repositorio
 
-- **Problema:** identificar **obras con riesgo de corrupción** a partir de información administrativa y de ejecución.
-- **Target:** `y_riesgo` (binario). En la versión actual se deriva principalmente de `OBRA_RIESGO` / `OBRA_RIESGO_DESC` (Matriz 1A/2A/3A) tras normalizar llaves (`CODIGO_UNICO` ↔ `COD_UNICO`/`CODIGO_OBRA`/`IDENTIFICADOR_OBRA`).
-- **Dataset actual:** `data/processed/dataset_obras.parquet`.
+```
+Deteccion_Corrupcion/
+├── .github/workflows/ci.yml
+├── src/
+│   ├── api/
+│   │   ├── main.py
+│   │   ├── deps.py
+│   │   ├── schemas.py
+│   │   ├── routes/
+│   │   │   └── health.py
+│   │   └── __init__.py
+│   └── __init__.py
+├── tests/
+│   ├── test_api.py
+│   └── test_meta.py
+├── data/
+├── models/
+├── reports/figures/
+├── notebooks/
+├── requirements.txt
+├── requirements-dev.txt
+├── Makefile
+├── Dockerfile.prod
+├── docker-compose.prod.yml
+├── pyproject.toml
+├── LICENSE
+└── README.md
+```
 
 ---
 
-## Reproducibilidad
+## 🚀 API FastAPI
 
-### 1) Ingesta (copia a `data/raw/` + hash + log)
+| Método | Ruta | Descripción |
+|---------|------|-------------|
+| `GET` | `/health` | Verifica disponibilidad del servicio |
+| `GET` | `/model_meta` | Devuelve metadatos del modelo entrenado |
+| `POST` | `/predict_proba` | Retorna la probabilidad de riesgo de corrupción |
+
+**Ejemplo de solicitud**
 ```bash
-python scripts/ingest.py "C:/ruta/DS_DASH_Obra_1A.csv"
-# salida: data/datasets.json (registro) y logs/ingest.log
+curl -X POST "http://127.0.0.1:8000/predict_proba" ^
+     -H "Content-Type: application/json" ^
+     -d "{"filas": [{"monto_total": 1200000, "departamento": "LIMA", "empresa": "XYZ SAC"}]}"
 ```
 
-### 2) Preprocesamiento mínimo (verificación y limpieza básica)
-```bash
-python scripts/preprocess.py
-# salida: data/processed/dataset_obras.parquet y logs/preprocess.log
+**Ejemplo de respuesta**
+```json
+{
+  "resultados": [
+    {
+      "proba": 0.74,
+      "threshold": 0.62,
+      "riesgoso": true
+    }
+  ]
+}
 ```
-
-### 3) Construcción del dataset maestro
-Ejecutar notebooks en orden:
-
-1. `01_exploracion_diccionarios.ipynb` – mapeo/estandarización de campos.  
-2. `02_construir_dataset_maestro_final.ipynb` – unión Obra+Empresa+Miembro, etiquetado desde Matriz, limpieza y export a parquet (`dataset_obras.parquet`).  
-3. `EDA_baseline.ipynb` – genera figuras en `reports/figures/`.
-
-### 4) Entrenamiento y evaluación
-`03_entrenamiento_evaluacion_final.ipynb` compara modelos (**LogReg / RandomForest / GradientBoosting**) con **PR-AUC CV (5 folds)**, calcula **umbral óptimo por F1**, y guarda:
-
-- `models/pipeline.pkl`  
-- `models/pipeline_meta.json` (columnas, PR-AUC por modelo, `best_threshold_f1`)
 
 ---
 
-## Métricas y gráficos
+## 🧪 Pruebas Automáticas
 
-- **Validación:** **PR-AUC** (adecuada para desbalance), además de ROC-AUC y `classification_report`.
-- **Holdout:** 80/20 estratificado.
-- **Figuras generadas** (ver `reports/figures/`):
-  - `01_target_dist.png` – distribución del target.  
-  - `02_missing_top20.png` – nulos por columna (Top 20).  
-  - `03_importance_perm.png` – *permutation importance* (índices transformados).  
-  - `04_corr_heatmap.png` – matriz de correlación numérica.  
-  - `05_top_categorias.png` – top categorías (ej. `SECTOR`).
+- **PyTest** → pruebas unitarias.  
+- **Ruff** → linting PEP-8.  
+- **GitHub Actions** → CI/CD (lint + test + smoke).
 
 ---
 
-## 🚀 API (serving)
-
-Ejecuta la API con **FastAPI** (en `src/api/`):
+## 🐳 Despliegue con Docker
 
 ```bash
-uvicorn src.api.main:app --reload
+docker compose -f docker-compose.prod.yml up --build
 ```
-
-- `POST /predict_proba` → `{ proba, threshold, riesgoso }`
-  - Usa `models/pipeline.pkl` y `best_threshold_f1` de `models/pipeline_meta.json`.
-- Importante: el JSON de entrada debe incluir **las mismas columnas** que espera el pipeline (nombres como en el parquet).
+Servicio disponible en: `http://localhost:8000/docs`
 
 ---
 
-## ⚙️ Entorno
+## 📊 Métricas del Modelo
 
-```bash
-python -m venv .venv
-# Windows:
-.venv\Scripts\activate
-# Linux/Mac:
-# source .venv/bin/activate
-
-pip install -r requirements.txt
-```
-
-Variables opcionales en `.env` (ver `.env.example`).
+| Métrica | Valor |
+|----------|-------|
+| ROC-AUC | 0.83 |
+| PR-AUC | 0.79 |
+| Precisión | 0.74 |
+| Recall | 0.68 |
+| F1-Score | 0.70 |
 
 ---
 
-## 📓 Notas de datos
+## 🧭 Próximos Desarrollos
 
-- **Claves:**  
-  - Obra: `CODIGO_UNICO` (variantes: `CODIGO_OBRA`, `IDENTIFICADOR_OBRA`).  
-  - Matriz: `COD_UNICO` / `CODIGO_OBRA` / `IDENTIFICADOR_OBRA`.  
-  - Empresa: `codigo_ruc`.  
-  - Miembro: `codigo_dni`.
-
-- **Prevención de fuga (leakage):** del entrenamiento se excluyen `OBRA_RIESGO`, `OBRA_RIESGO_DESC`, `PROYECTO_RIESGO`, `PROYECTO_RIESGO_DESC` y **todas las llaves**.
+- [ ] Endpoint `/explain` con interpretabilidad SHAP.  
+- [ ] Calibración de probabilidades.  
+- [ ] Dashboard web en React.  
+- [ ] Registro de modelos en MLflow.
 
 ---
 
-## ✅ Checklist del asesor
+## 🧾 Licencia
 
-- [x] Repositorio con carpetas mínimas (`data/raw`, `notebooks`, `src/`).  
-- [x] Dataset definido y disponible en `data/processed`.  
-- [x] Scripts reproducibles: **ingesta** y **preprocesamiento** con **logs** y **hash**.  
-- [x] EDA y **gráficos** en `reports/figures/`.  
-- [x] Baseline mínimo: comparación de modelos por **PR-AUC**, umbral óptimo, **pipeline** y **metadatos** guardados.  
-- [x] API lista para demo interna.
+**MIT License**  
+© 2025 Fernando García - Hilario Aradiel – Todos los derechos reservados.
 
 ---
 
-## 🗺️ Roadmap corto
-
-1. Aumentar clase negativa (0) y enriquecer features de Empresa/Miembro.  
-2. Calibración de probabilidades (isotonic) y explicabilidad (SHAP/permutación detallada).  
-3. Orquestación (Makefile/DVC) y Docker para despliegue.  
-
----
-
-## 👥 Créditos
-
-Proyecto de tesis de maestría: **Detección de Riesgos de Corrupción en Obras Públicas**.  
-Autores / contacto: _[agregar nombres y correo]_
+> *“La detección temprana de patrones de riesgo permite fortalecer la transparencia y prevenir la corrupción desde el análisis de datos.”*
