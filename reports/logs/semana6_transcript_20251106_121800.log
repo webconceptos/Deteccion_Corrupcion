@@ -1,0 +1,57 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20251106121800
+Nombre de usuario: WC2023\User
+Usuario RunAs: WC2023\User
+Nombre de la configuración: 
+Máquina: WC2023 (Microsoft Windows NT 10.0.19045.0)
+Aplicación host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Id. de proceso: 20500
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+==========================================================
+PS>ErrorTerminación(): "El término 'build_dataset_ml.py' no se reconoce como nombre de un cmdlet, función, archivo de script o programa ejecutable. Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta es correcta e inténtelo de nuevo."
+>> ErrorTerminación(): "El término 'build_dataset_ml.py' no se reconoce como nombre de un cmdlet, función, archivo de script o programa ejecutable. Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta es correcta e inténtelo de nuevo."
+El término 'build_dataset_ml.py' no se reconoce como nombre de un cmdlet, función, archivo de script o programa ejecutable. Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta es correcta e inténtelo de nuevo.
+build_dataset_ml.py : El término 'build_dataset_ml.py' no se reconoce
+como nombre de un cmdlet, función, archivo de script o programa
+ejecutable. Compruebe si escribió correctamente el nombre o, si incluyó
+una ruta de acceso, compruebe que dicha ruta es correcta e inténtelo de
+nuevo.
+En D:\IA_Investigacion\Deteccion_Corrupcion\run_semana6_full.ps1: 87
+Carácter: 46
++ Invoke-Step -Title "Construyendo dataset ML (build_dataset_ml.py)" `
++                                              ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (build_dataset_ml.py:Stri
+   ng) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) chmod +x run_semana6_full.sh
+chmod : El término 'chmod' no se reconoce como nombre de un cmdlet, función, archivo de script o programa ejecutable. 
+Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta es correcta e 
+inténtelo de nuevo.
+En línea: 1 Carácter: 1
++ chmod +x run_semana6_full.sh
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (chmod:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+chmod : El término 'chmod' no se reconoce como nombre de un cmdlet,
+función, archivo de script o programa ejecutable. Compruebe si escribió
+correctamente el nombre o, si incluyó una ruta de acceso, compruebe que
+dicha ruta es correcta e inténtelo de nuevo.
+En línea: 1 Carácter: 1
++ chmod +x run_semana6_full.sh
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (chmod:String) [], Comman
+   dNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\IA_Investigacion\Deteccion_Corrupcion>

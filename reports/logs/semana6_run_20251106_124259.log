@@ -1,0 +1,70 @@
+==========================================================
+ 🧠 Semana 6 – Pipeline completo de modelado predictivo
+ Log: reports/logs/semana6_run_20251106_124259.log
+==========================================================
+
+[12:43:00] ▶️  📦 [1/9] Construyendo datasets...
+Comando: python scripts/build_dataset_ml.py && python scripts/build_dataset_integrado.py
+
+=== [1] CARGA DE FUENTES ===
+✅ Cargado DS_DASH_Obra_1A.csv                      → 326 filas, 13 cols
+✅ Cargado DS_DASH_Obra_2A_3A.csv                   → 552 filas, 23 cols
+✅ Cargado DS_DASH_Obra_2B.csv                      → 1613 filas, 7 cols
+✅ Cargado DS_DASH_Obra_3B.csv                      → 5249 filas, 21 cols
+✅ Cargado DS_DASH_Obra_3C.csv                      → 5249 filas, 9 cols
+✅ Cargado DS_DASH_Obra_4A.csv                      → 326 filas, 10 cols
+✅ Cargado DS_DASH_Obra_4B.csv                      → 326 filas, 16 cols
+✅ Cargado DS_DASH_Obra_5A.csv                      → 634 filas, 16 cols
+✅ Cargado DS_DASH_Empresa_1A.csv                   → 553 filas, 10 cols
+✅ Cargado DS_DASH_Empresa_1B.csv                   → 2148 filas, 6 cols
+✅ Cargado DS_DASH_Empresa_2A.csv                   → 371 filas, 12 cols
+✅ Cargado DS_DASH_Empresa_2B.csv                   → 5395 filas, 5 cols
+✅ Cargado DS_DASH_Empresa_2C.csv                   → 26 filas, 3 cols
+✅ Cargado DS_DASH_Miembro_1A.csv                   → 1613 filas, 11 cols
+✅ Cargado DS_DASH_Miembro_2A.csv                   → 739 filas, 9 cols
+✅ Cargado DS_DASH_Miembro_3A.csv                   → 2606 filas, 5 cols
+✅ Cargado DS_DASH_Miembro_3B.csv                   → 643 filas, 5 cols
+
+📊 Obras: (14179, 56), Empresas: (8202, 26), Funcionarios: (5317, 17)
+
+=== [2] CARGA DE PERFILAMIENTO DE RIESGO ===
+✅ Perfilamiento de riesgo: perfilamiento_obra_riesgosa.xlsx         (42 filas)
+✅ Perfilamiento de riesgo: perfilamiento_empresa_riesgosa.xlsx      (10 filas)
+
+=== [3] UNIFICACIÓN DE FUENTES ===
+🔗 Unión con riesgo_obra por ETAPA
+✅ Dataset unificado temporal: 14179 filas, 71 columnas
+
+=== [4] CREACIÓN DE VARIABLE OBJETIVO (y_riesgo) ===
+✅ Etiqueta creada desde columna existente: RIESGO_OBRA
+
+=== [5] SELECCIÓN DE VARIABLES ===
+
+=== [6] LIMPIEZA FINAL ===
+
+✅ Dataset final guardado en: data\processed\dataset_obras.parquet
+   → 14179 filas, 30 columnas
+
+=== [1] CARGA DE FUENTES ===
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\scripts\build_dataset_integrado.py", line 28, in load_csv_folder
+    print(f"\u2705 Cargado {f.name:35s} \u2192 {df.shape}")
+  File "C:\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\scripts\build_dataset_integrado.py", line 164, in <module>
+    main()
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\scripts\build_dataset_integrado.py", line 58, in main
+    obras = clean(load_csv_folder(BASE / "obra"))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\scripts\build_dataset_integrado.py", line 30, in load_csv_folder
+    print(f"\u26a0\ufe0f Error en {f.name}: {e}")
+  File "C:\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>
