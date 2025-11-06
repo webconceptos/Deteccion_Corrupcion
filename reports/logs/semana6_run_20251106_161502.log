@@ -1,0 +1,102 @@
+==========================================================
+ 🧠 Semana 6 – Pipeline completo de modelado predictivo
+ Log: reports/logs/semana6_run_20251106_161502.log
+==========================================================
+
+[16:15:03] ▶️  📦 [1/9] Construyendo datasets...
+Comando: python scripts/build_dataset_ml.py && python scripts/build_dataset_integrado.py
+
+=== [1] CARGA DE FUENTES ===
+✅ Cargado DS_DASH_Obra_1A.csv                      → 326 filas, 13 cols
+✅ Cargado DS_DASH_Obra_2A_3A.csv                   → 552 filas, 23 cols
+✅ Cargado DS_DASH_Obra_2B.csv                      → 1613 filas, 7 cols
+✅ Cargado DS_DASH_Obra_3B.csv                      → 5249 filas, 21 cols
+✅ Cargado DS_DASH_Obra_3C.csv                      → 5249 filas, 9 cols
+✅ Cargado DS_DASH_Obra_4A.csv                      → 326 filas, 10 cols
+✅ Cargado DS_DASH_Obra_4B.csv                      → 326 filas, 16 cols
+✅ Cargado DS_DASH_Obra_5A.csv                      → 634 filas, 16 cols
+✅ Cargado DS_DASH_Empresa_1A.csv                   → 553 filas, 10 cols
+✅ Cargado DS_DASH_Empresa_1B.csv                   → 2148 filas, 6 cols
+✅ Cargado DS_DASH_Empresa_2A.csv                   → 371 filas, 12 cols
+✅ Cargado DS_DASH_Empresa_2B.csv                   → 5395 filas, 5 cols
+✅ Cargado DS_DASH_Empresa_2C.csv                   → 26 filas, 3 cols
+✅ Cargado DS_DASH_Miembro_1A.csv                   → 1613 filas, 11 cols
+✅ Cargado DS_DASH_Miembro_2A.csv                   → 739 filas, 9 cols
+✅ Cargado DS_DASH_Miembro_3A.csv                   → 2606 filas, 5 cols
+✅ Cargado DS_DASH_Miembro_3B.csv                   → 643 filas, 5 cols
+
+📊 Obras: (14179, 56), Empresas: (8202, 26), Funcionarios: (5317, 17)
+
+=== [2] CARGA DE PERFILAMIENTO DE RIESGO ===
+✅ Perfilamiento de riesgo: perfilamiento_obra_riesgosa.xlsx         (42 filas)
+✅ Perfilamiento de riesgo: perfilamiento_empresa_riesgosa.xlsx      (10 filas)
+
+=== [3] UNIFICACIÓN DE FUENTES ===
+🔗 Unión con riesgo_obra por ETAPA
+✅ Dataset unificado temporal: 14179 filas, 71 columnas
+
+=== [4] CREACIÓN DE VARIABLE OBJETIVO (y_riesgo) ===
+✅ Etiqueta creada desde columna existente: RIESGO_OBRA
+
+=== [5] SELECCIÓN DE VARIABLES ===
+
+=== [6] LIMPIEZA FINAL ===
+
+✅ Dataset final guardado en: data\processed\dataset_obras.parquet
+   → 14179 filas, 30 columnas
+
+=== [1] CARGA DE FUENTES ===
+✅ Cargado DS_DASH_Obra_1A.csv                 → (326, 13)
+✅ Cargado DS_DASH_Obra_2A_3A.csv              → (552, 23)
+✅ Cargado DS_DASH_Obra_2B.csv                 → (1613, 7)
+✅ Cargado DS_DASH_Obra_3B.csv                 → (5249, 21)
+✅ Cargado DS_DASH_Obra_3C.csv                 → (5249, 9)
+✅ Cargado DS_DASH_Obra_4A.csv                 → (326, 10)
+✅ Cargado DS_DASH_Obra_4B.csv                 → (326, 16)
+✅ Cargado DS_DASH_Obra_5A.csv                 → (634, 16)
+✅ Cargado DS_DASH_Empresa_1A.csv              → (553, 10)
+✅ Cargado DS_DASH_Empresa_1B.csv              → (2148, 6)
+✅ Cargado DS_DASH_Empresa_2A.csv              → (371, 12)
+✅ Cargado DS_DASH_Empresa_2B.csv              → (5395, 5)
+✅ Cargado DS_DASH_Empresa_2C.csv              → (26, 3)
+✅ Cargado DS_DASH_Miembro_1A.csv              → (1613, 11)
+✅ Cargado DS_DASH_Miembro_2A.csv              → (739, 9)
+✅ Cargado DS_DASH_Miembro_3A.csv              → (2606, 5)
+✅ Cargado DS_DASH_Miembro_3B.csv              → (643, 5)
+📊 Obras: (14179, 56), Empresas: (8202, 26), Funcionarios: (5317, 17)
+
+=== [2] CARGA DE PERFILAMIENTOS ===
+✅ Cargado perfilamiento: perfilamiento_obra_riesgosa.xlsx    ((42, 16))
+✅ Cargado perfilamiento: perfilamiento_empresa_riesgosa.xlsx ((10, 11))
+
+=== [3] ETIQUETAS DE RIESGO POR DOMINIO ===
+⚠️ Etiqueta simulada generada.
+⚠️ Etiqueta simulada generada.
+⚠️ Etiqueta simulada generada.
+
+=== [4] NORMALIZACIÓN DE LLAVES ===
+✅ OBRA normalizado ((14179, 57))
+✅ EMPRESA normalizado ((8202, 27))
+✅ FUNCIONARIO normalizado ((5317, 18))
+
+=== [5] FUSIÓN DE FUENTES ===
+📊 Dataset integrado temporal: (14179, 57)
+
+=== [6] LIMPIEZA Y SELECCIÓN DE VARIABLES ===
+
+=== [7] EXPORTACIÓN ===
+✅ Dataset integrado guardado en: data\processed\dataset_integrado.parquet
+   → 14179 filas, 56 columnas
+✅ Completado: 📦 [1/9] Construyendo datasets...
+
+[16:15:13] ▶️  🤖 [2/9] Entrenando modelos...
+Comando: python scripts/train_models.py --folds 5
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sklearn\linear_model\_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 1000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=1000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
