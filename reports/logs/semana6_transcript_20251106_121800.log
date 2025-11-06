@@ -3408,3 +3408,9 @@ PS D:\IA_Investigacion\Deteccion_Corrupcion>
 PS D:\IA_Investigacion\Deteccion_Corrupcion>
 (env) .\push_semana.sh
 PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) git remote -v
+
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) git add .
+
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
