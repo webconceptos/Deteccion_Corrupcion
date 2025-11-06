@@ -1,0 +1,72 @@
+==========================================================
+ 🚀 Semana 7 – Experimentos de optimización de hiperparámetros
+ Log: reports/logs/semana7_run_20251106_145432.log
+==========================================================
+
+[14:54:32] ▶️  Random Search
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\scripts\opt_random_search.py", line 11, in <module>
+    from xgboost import XGBClassifier
+ModuleNotFoundError: No module named 'xgboost'
+❌ Error en Random Search
+
+[14:54:34] ▶️  Bayesian Optimization
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\scripts\opt_bayes_opt.py", line 10, in <module>
+    from xgboost import XGBClassifier
+ModuleNotFoundError: No module named 'xgboost'
+❌ Error en Bayesian Optimization
+
+[14:54:36] ▶️  Resumen de resultados
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\scripts\opt_summary.py", line 8, in <module>
+    r = pd.read_csv(OUT_DIR/"random_search_results.csv")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'reports\\tuning\\random_search_results.csv'
+❌ Error en Resumen de resultados
+
+[14:54:37] ▶️  Gráfico de evolución
+No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\scripts\opt_plot_evolution.py", line 21, in <module>
+    plt.savefig(OUT_DIR / "evolution_comparison.png", dpi=300)
+  File "C:\Python312\Lib\site-packages\matplotlib\pyplot.py", line 1134, in savefig
+    res = fig.savefig(*args, **kwargs)  # type: ignore[func-returns-value]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\matplotlib\figure.py", line 3390, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "C:\Python312\Lib\site-packages\matplotlib\backend_bases.py", line 2193, in print_figure
+    result = print_method(
+             ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\matplotlib\backend_bases.py", line 2043, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+                                                                 ^^^^^
+  File "C:\Python312\Lib\site-packages\matplotlib\backends\backend_agg.py", line 497, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+  File "C:\Python312\Lib\site-packages\matplotlib\backends\backend_agg.py", line 446, in _print_pil
+    mpl.image.imsave(
+  File "C:\Python312\Lib\site-packages\matplotlib\image.py", line 1656, in imsave
+    image.save(fname, **pil_kwargs)
+  File "C:\Python312\Lib\site-packages\PIL\Image.py", line 2456, in save
+    fp = builtins.open(filename, "w+b")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\IA_Investigacion\\Deteccion_Corrupcion\\reports\\tuning\\evolution_comparison.png'
+❌ Error en Gráfico de evolución
+==========================================================
+🏁 Semana 7 finalizada. Revisa reports/tuning/ para resultados.
+==========================================================

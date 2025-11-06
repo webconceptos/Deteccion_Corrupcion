@@ -1,0 +1,7 @@
+warning: in the working copy of 'push_semana.sh', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/logs/push_20251106_143459.log', LF will be replaced by CRLF the next time Git touches it
+[feat/semana7 84e177d] Semana 7 - Comparables[D[D[D[D[D[D[D[D[D[D[DExperimentos C[3~[3~[3~[3~[3~[3~[3~[3~[3~[3~[3~omparables
+ 3 files changed, 9 insertions(+), 1 deletion(-)
+ create mode 100644 reports/logs/push_20251106_144353.log
+To https://github.com/webconceptos/Deteccion_Corrupcion
+   d6baa25..84e177d  feat/semana7 -> feat/semana7
