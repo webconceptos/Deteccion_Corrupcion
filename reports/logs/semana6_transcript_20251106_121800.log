@@ -191,3 +191,3215 @@ PS D:\IA_Investigacion\Deteccion_Corrupcion>
 PS D:\IA_Investigacion\Deteccion_Corrupcion>
 (env) .\push_semana.sh
 PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) .\run_semana7_full.sh
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) python - <<EOF
+En línea: 1 Carácter: 11
++ python - <<EOF
++           ~
+Falta la especificación de archivo después del operador de redirección.
+
+En línea: 1 Carácter: 10
++ python - <<EOF
++          ~
+El operador '<' está reservado para uso futuro.
+
+En línea: 1 Carácter: 11
++ python - <<EOF
++           ~
+El operador '<' está reservado para uso futuro.
+En línea: 1 Carácter: 11
++ python - <<EOF
++           ~
+Falta la especificación de archivo después del operador de redirección.
+
+En línea: 1 Carácter: 10
++ python - <<EOF
++          ~
+El operador '<' está reservado para uso futuro.
+
+En línea: 1 Carácter: 11
++ python - <<EOF
++           ~
+El operador '<' está reservado para uso futuro.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorR
+   ecordException
+    + FullyQualifiedErrorId : MissingFileSpecification
+
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) import pandas as pd
+import : El término 'import' no se reconoce como nombre de un cmdlet, función, archivo de script o programa ejecutable. 
+Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta es correcta e 
+inténtelo de nuevo.
+En línea: 1 Carácter: 1
++ import pandas as pd
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (import:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+import : El término 'import' no se reconoce como nombre de un cmdlet,
+función, archivo de script o programa ejecutable. Compruebe si escribió
+correctamente el nombre o, si incluyó una ruta de acceso, compruebe que
+dicha ruta es correcta e inténtelo de nuevo.
+En línea: 1 Carácter: 1
++ import pandas as pd
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (import:String) [], Comma
+   ndNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) df = pd.read_parquet('data/processed/dataset_integrado.parquet')
+df : El término 'df' no se reconoce como nombre de un cmdlet, función, archivo de script o programa ejecutable. 
+Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta es correcta e 
+inténtelo de nuevo.
+En línea: 1 Carácter: 1
++ df = pd.read_parquet('data/processed/dataset_integrado.parquet')
++ ~~
+    + CategoryInfo          : ObjectNotFound: (df:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+df : El término 'df' no se reconoce como nombre de un cmdlet, función,
+archivo de script o programa ejecutable. Compruebe si escribió
+correctamente el nombre o, si incluyó una ruta de acceso, compruebe que
+dicha ruta es correcta e inténtelo de nuevo.
+En línea: 1 Carácter: 1
++ df = pd.read_parquet('data/processed/dataset_integrado.parquet')
++ ~~
+    + CategoryInfo          : ObjectNotFound: (df:String) [], CommandNo
+   tFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) print(df.dtypes.value_counts())
+En línea: 1 Carácter: 30
++ print(df.dtypes.value_counts())
++                              ~
+Se esperaba una expresión después de '('.
+En línea: 1 Carácter: 30
++ print(df.dtypes.value_counts())
++                              ~
+Se esperaba una expresión después de '('.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorR
+   ecordException
+    + FullyQualifiedErrorId : ExpectedExpression
+
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) print("\nColumnas tipo object:\n", df.select_dtypes(include=['object']).columns.tolist())
+En línea: 1 Carácter: 35
++ print("\nColumnas tipo object:\n", df.select_dtypes(include=['object' ...
++                                   ~
+Falta una expresión después de ','.
+
+En línea: 1 Carácter: 36
++ print("\nColumnas tipo object:\n", df.select_dtypes(include=['object' ...
++                                    ~~~~~~~~~~~~~~~~
+Token 'df.select_dtypes' inesperado en la expresión o la instrucción.
+
+En línea: 1 Carácter: 35
++ print("\nColumnas tipo object:\n", df.select_dtypes(include=['object' ...
++                                   ~
+Falta el paréntesis de cierre ')' en la expresión.
+
+En línea: 1 Carácter: 89
++ ... po object:\n", df.select_dtypes(include=['object']).columns.tolist())
++                                                                         ~
+Token ')' inesperado en la expresión o la instrucción.
+En línea: 1 Carácter: 35
++ print("\nColumnas tipo object:\n", df.select_dtypes(include=['object'
+...
++                                   ~
+Falta una expresión después de ','.
+
+En línea: 1 Carácter: 36
++ print("\nColumnas tipo object:\n", df.select_dtypes(include=['object'
+...
++                                    ~~~~~~~~~~~~~~~~
+Token 'df.select_dtypes' inesperado en la expresión o la instrucción.
+
+En línea: 1 Carácter: 35
++ print("\nColumnas tipo object:\n", df.select_dtypes(include=['object'
+...
++                                   ~
+Falta el paréntesis de cierre ')' en la expresión.
+
+En línea: 1 Carácter: 89
++ ... po object:\n",
+df.select_dtypes(include=['object']).columns.tolist())
++
+  ~
+Token ')' inesperado en la expresión o la instrucción.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorR
+   ecordException
+    + FullyQualifiedErrorId : MissingExpressionAfterToken
+
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) EOF
+EOF : El término 'EOF' no se reconoce como nombre de un cmdlet, función, archivo de script o programa ejecutable. 
+Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta es correcta e 
+inténtelo de nuevo.
+En línea: 1 Carácter: 1
++ EOF
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (EOF:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+EOF : El término 'EOF' no se reconoce como nombre de un cmdlet,
+función, archivo de script o programa ejecutable. Compruebe si escribió
+correctamente el nombre o, si incluyó una ruta de acceso, compruebe que
+dicha ruta es correcta e inténtelo de nuevo.
+En línea: 1 Carácter: 1
++ EOF
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (EOF:String) [], CommandN
+   otFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) .\run_semana7_full.sh
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) clear
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) pip install bayesian-optimization xgboost seaborn matplotlib pandas scikit-learn
+Requirement already satisfied: bayesian-optimization in d:\ia_investigaci
+on\deteccion_corrupcion\env\lib\site-packages (3.1.0)
+Requirement already satisfied: xgboost in d:\ia_investigacion\deteccion_c
+orrupcion\env\lib\site-packages (3.1.1)
+Collecting seaborn
+  Using cached seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Requirement already satisfied: matplotlib in d:\ia_investigacion\deteccio
+n_corrupcion\env\lib\site-packages (3.10.7)
+Requirement already satisfied: pandas in d:\ia_investigacion\deteccion_co
+rrupcion\env\lib\site-packages (2.3.3)
+Requirement already satisfied: scikit-learn in d:\ia_investigacion\detecc
+ion_corrupcion\env\lib\site-packages (1.7.2)
+Requirement already satisfied: colorama>=0.4.6 in d:\ia_investigacion\det
+eccion_corrupcion\env\lib\site-packages (from bayesian-optimization) (0.4
+.6)
+Requirement already satisfied: numpy>=1.25 in d:\ia_investigacion\detecci
+on_corrupcion\env\lib\site-packages (from bayesian-optimization) (2.3.4)
+Requirement already satisfied: scipy>=1.0.0 in d:\ia_investigacion\detecc
+ion_corrupcion\env\lib\site-packages (from bayesian-optimization) (1.16.3
+)
+Requirement already satisfied: contourpy>=1.0.1 in d:\ia_investigacion\de
+teccion_corrupcion\env\lib\site-packages (from matplotlib) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in d:\ia_investigacion\detecc
+ion_corrupcion\env\lib\site-packages (from matplotlib) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in d:\ia_investigacion\d
+eteccion_corrupcion\env\lib\site-packages (from matplotlib) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in d:\ia_investigacion\d
+eteccion_corrupcion\env\lib\site-packages (from matplotlib) (1.4.9)
+Requirement already satisfied: packaging>=20.0 in d:\ia_investigacion\det
+eccion_corrupcion\env\lib\site-packages (from matplotlib) (25.0)
+Requirement already satisfied: pillow>=8 in d:\ia_investigacion\deteccion
+_corrupcion\env\lib\site-packages (from matplotlib) (12.0.0)
+Requirement already satisfied: pyparsing>=3 in d:\ia_investigacion\detecc
+ion_corrupcion\env\lib\site-packages (from matplotlib) (3.2.5)
+Requirement already satisfied: python-dateutil>=2.7 in d:\ia_investigacio
+n\deteccion_corrupcion\env\lib\site-packages (from matplotlib) (2.9.0.pos
+t0)
+Requirement already satisfied: pytz>=2020.1 in d:\ia_investigacion\detecc
+ion_corrupcion\env\lib\site-packages (from pandas) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in d:\ia_investigacion\dete
+ccion_corrupcion\env\lib\site-packages (from pandas) (2025.2)
+Requirement already satisfied: joblib>=1.2.0 in d:\ia_investigacion\detec
+cion_corrupcion\env\lib\site-packages (from scikit-learn) (1.5.2)
+Requirement already satisfied: threadpoolctl>=3.1.0 in d:\ia_investigacio
+n\deteccion_corrupcion\env\lib\site-packages (from scikit-learn) (3.6.0)
+Requirement already satisfied: six>=1.5 in d:\ia_investigacion\deteccion_
+corrupcion\env\lib\site-packages (from python-dateutil>=2.7->matplotlib)
+(1.17.0)
+Using cached seaborn-0.13.2-py3-none-any.whl (294 kB)
+Installing collected packages: seaborn
+Successfully installed seaborn-0.13.2
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) python scripts/opt_master.py
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 200, 'max_depth': 8, 'learnin
+g_rate': 0.2, 'subsample': 0.8, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:22:59] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:22:59] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:22:59] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:22:59] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:22:59] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:22:59] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:22:59] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:22:59] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:22:59] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:22:59] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:00] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:00] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:00] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:00] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:00] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+⚠️ Error con configuración {'n_estimators': 200, 'max_depth': 8, 'learnin
+g_rate': 0.2, 'subsample': 0.8, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 200, 'max_depth': 8, 'learnin
+g_rate': 0.2, 'subsample': 0.9, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 200, 'max_depth': 8, 'learnin
+g_rate': 0.2, 'subsample': 0.9, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:00] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:00] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:00] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:00] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:00] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:00] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:00] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:00] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:00] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:00] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:01] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:01] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:01] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:01] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:01] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 4, 'learnin
+g_rate': 0.05, 'subsample': 0.8, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 4, 'learnin
+g_rate': 0.05, 'subsample': 0.8, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 4, 'learnin
+g_rate': 0.05, 'subsample': 0.9, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:01] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:01] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:01] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:01] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:01] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:01] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:01] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:01] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:01] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:02] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:02] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:02] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:02] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:02] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:02] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 4, 'learnin
+g_rate': 0.05, 'subsample': 0.9, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 4, 'learnin
+g_rate': 0.1, 'subsample': 0.8, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 4, 'learnin
+g_rate': 0.1, 'subsample': 0.8, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:02] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:02] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:02] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:02] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:02] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:02] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:02] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:02] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:02] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:02] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:03] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:03] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:03] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:03] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:03] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 4, 'learnin
+g_rate': 0.1, 'subsample': 0.9, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 4, 'learnin
+g_rate': 0.1, 'subsample': 0.9, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 4, 'learnin
+g_rate': 0.2, 'subsample': 0.8, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:03] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:03] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:03] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:03] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:03] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:03] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:03] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:03] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:03] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:03] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:04] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:04] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:04] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:04] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:04] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 4, 'learnin
+g_rate': 0.2, 'subsample': 0.8, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 4, 'learnin
+g_rate': 0.2, 'subsample': 0.9, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 4, 'learnin
+g_rate': 0.2, 'subsample': 0.9, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:04] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:04] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:04] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:04] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:04] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:04] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:04] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:04] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:05] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:05] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:05] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:05] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:05] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:05] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:05] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 6, 'learnin
+g_rate': 0.05, 'subsample': 0.8, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 6, 'learnin
+g_rate': 0.05, 'subsample': 0.8, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 6, 'learnin
+g_rate': 0.05, 'subsample': 0.9, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:05] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:05] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:05] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:05] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:05] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:06] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:06] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:06] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:06] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:06] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:06] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:06] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:06] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:06] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:06] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 6, 'learnin
+g_rate': 0.05, 'subsample': 0.9, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 6, 'learnin
+g_rate': 0.1, 'subsample': 0.8, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 6, 'learnin
+g_rate': 0.1, 'subsample': 0.8, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:06] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:06] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:06] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:06] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:07] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:07] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:07] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:07] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:07] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:07] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:07] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:07] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:07] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:07] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:07] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 6, 'learnin
+g_rate': 0.1, 'subsample': 0.9, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 6, 'learnin
+g_rate': 0.1, 'subsample': 0.9, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 6, 'learnin
+g_rate': 0.2, 'subsample': 0.8, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:08] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:08] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:08] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:08] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:08] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:08] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:08] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:08] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:08] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:08] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:09] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:09] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:09] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:09] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:09] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 6, 'learnin
+g_rate': 0.2, 'subsample': 0.8, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 6, 'learnin
+g_rate': 0.2, 'subsample': 0.9, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 6, 'learnin
+g_rate': 0.2, 'subsample': 0.9, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:09] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:09] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:09] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:09] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:09] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:09] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:09] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:09] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:09] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:10] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:10] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:10] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:10] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:10] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:10] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 8, 'learnin
+g_rate': 0.05, 'subsample': 0.8, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 8, 'learnin
+g_rate': 0.05, 'subsample': 0.8, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 8, 'learnin
+g_rate': 0.05, 'subsample': 0.9, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:10] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:10] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:10] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:10] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:10] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:11] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:11] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:11] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:11] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:11] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:11] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:11] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:11] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:11] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:11] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 8, 'learnin
+g_rate': 0.05, 'subsample': 0.9, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 8, 'learnin
+g_rate': 0.1, 'subsample': 0.8, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 8, 'learnin
+g_rate': 0.1, 'subsample': 0.8, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:11] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:11] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:11] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:11] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:11] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:12] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:12] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:12] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:12] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xgboost\ca
+llback.py:386: UserWarning: [17:23:12] WARNING: C:\actions-runner\_work\x
+gboost\xgboost\src\learner.cc:790:
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 8, 'learnin
+g_rate': 0.1, 'subsample': 0.9, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 8, 'learnin
+g_rate': 0.1, 'subsample': 0.9, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 8, 'learnin
+g_rate': 0.2, 'subsample': 0.8, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 8, 'learnin
+g_rate': 0.2, 'subsample': 0.8, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 8, 'learnin
+g_rate': 0.2, 'subsample': 0.9, 'colsample_bytree': 0.8}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+⚠️ Error con configuración {'n_estimators': 400, 'max_depth': 8, 'learnin
+g_rate': 0.2, 'subsample': 0.9, 'colsample_bytree': 0.9}:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+-------------------------------------------------------------------------
+-------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sk
+learn\model_selection\_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\sklearn.py", line 1803, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\training.py", line 200, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 269, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self
+.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\xg
+boost\callback.py", line 461, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\scripts\opt_master.py",
+line 83, in <module>
+    df_random = pd.DataFrame(results_random).sort_values("f1_score", asce
+nding=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\pa
+ndas\core\frame.py", line 7211, in sort_values
+    k = self._get_label_or_level_values(by[0], axis=axis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\pa
+ndas\core\generic.py", line 1914, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'f1_score'
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) ls
+
+
+    Directorio: D:\IA_Investigacion\Deteccion_Corrupcion
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        06/11/2025     11:26                .github
+d-----        06/11/2025     11:26                backend-predictor
+d-----        06/11/2025     11:26                data
+d-----        06/11/2025     14:13                docs
+d-----        06/11/2025     11:31                env
+d-----        06/11/2025     11:26                frontend-predictor
+d-----        06/11/2025     11:26                logs
+d-----        06/11/2025     11:26                models
+d-----        06/11/2025     11:26                notebooks
+d-----        06/11/2025     16:48                reports
+d-----        06/11/2025     17:21                scripts
+d-----        06/11/2025     11:26                src
+d-----        06/11/2025     11:26                tests
+-a----        06/11/2025     11:26            222 .env.example
+-a----        06/11/2025     11:26            175 .gitattributes
+-a----        06/11/2025     17:27            455 .gitignore
+-a----        06/11/2025     11:26            309 docker-compose.prod.ym
+                                                  l
+-a----        06/11/2025     11:26            608 docker-compose.yaml
+-a----        06/11/2025     11:26            500 Dockerfile.prod
+-a----        06/11/2025     11:26           2935 fix-ci-lint.patch
+-a----        06/11/2025     11:26             62 LICENSE
+-a----        06/11/2025     11:26            436 Makefile
+-a----        06/11/2025     14:43           2952 push_semana.sh
+-a----        06/11/2025     11:26            225 pyproject.toml
+-a----        06/11/2025     11:26           5437 README.md
+-a----        06/11/2025     11:26           2490 README_exec.md
+-a----        06/11/2025     11:26             43 requirements-dev.txt
+-a----        06/11/2025     11:26            710 requirements.txt
+-a----        06/11/2025     12:17           7231 run_semana6_full.ps1
+-a----        06/11/2025     12:32           4359 run_semana6_full.sh
+-a----        06/11/2025     14:13           1434 run_semana7_full.sh
+-a----        06/11/2025     11:26           1168 setup_env.ps1
+-a----        06/11/2025     11:26           1502 sync_repo.ps1
+
+
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) .\push_semana.sh
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
