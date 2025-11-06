@@ -12,12 +12,6 @@ BASE = Path("data/external")
 OUT = Path("data/processed")
 OUT.mkdir(parents=True, exist_ok=True)
 
-
-# -*- coding: utf-8 -*-
-import sys, io
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-
-
 # =======================
 #  Funciones auxiliares
 # =======================
