@@ -28,7 +28,7 @@ if [[ -z "$SEMANA" ]]; then
   echo -e "${YELLOW}⚠️  No ingresaste una semana. Cancelando.${RESET}"
   exit 1
 fi
-BRANCH="feat/semana${SEMANA}-modelado"
+BRANCH="feat/semana${SEMANA}"
 
 # === 2️⃣ Verificar rama actual ===
 CURRENT_BRANCH=$(git branch --show-current)
