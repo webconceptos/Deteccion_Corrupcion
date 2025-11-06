@@ -13,7 +13,7 @@ __pycache__/
 # Datos (mantén datos pesados fuera del repo)
 data/raw/
 *.zip
-
+*.log
 # Notebooks con outputs pesados (opcional)
 *.nbconvert.ipynb
 
