@@ -100,3 +100,74 @@ You might also want to scale the data as shown in:
 Please also refer to the documentation for alternative solver options:
     https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
   n_iter_i = _check_optimize_result(
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sklearn\linear_model\_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 1000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=1000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sklearn\linear_model\_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 1000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=1000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sklearn\linear_model\_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 1000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=1000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sklearn\linear_model\_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 1000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=1000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+D:\IA_Investigacion\Deteccion_Corrupcion\env\Lib\site-packages\sklearn\linear_model\_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 1000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=1000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+=== [1] CARGA DE DATOS ===
+Dataset: 14179 filas, 56 columnas
+
+=== [2] ENTRENAMIENTO CRUZADO ===
+✅ logreg  → F1=0.356 | ROC_AUC=0.500 | PR_AUC=0.310 | Tiempo=473.5s
+✅ rf      → F1=0.207 | ROC_AUC=0.490 | PR_AUC=0.303 | Tiempo=1280.2s
+✅ xgb     → F1=0.065 | ROC_AUC=0.503 | PR_AUC=0.312 | Tiempo=260.6s
+
+📊 Resultados guardados en reports\metrics_semana6.csv (3 registros totales)
+🏆 Mejor modelo: LOGREG (F1=0.356)
+📁 Artefactos guardados en: models
+
+⏱ Tiempo total: 2107.7s
+✅ Completado: 🤖 [2/9] Entrenando modelos...
+
+[16:50:28] ▶️  📈 [3/9] Analizando resultados y métricas...
+Comando: python scripts/plot_importance.py && python scripts/plot_calibration.py && python scripts/plot_learning_curves.py
+=== Cargando modelo y datos ===
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\scripts\plot_importance.py", line 27, in <module>
+    print("\u26a0\ufe0f El modelo no es XGBoost. Este script est� optimizado para XGBClassifier.")
+  File "C:\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>
