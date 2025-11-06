@@ -3403,3 +3403,6 @@ d-----        06/11/2025     11:26                tests
 PS D:\IA_Investigacion\Deteccion_Corrupcion>
 (env) .\push_semana.sh
 PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) python scripts/opt_master.py
+
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
