@@ -1,36 +1,8 @@
 {
-  "target": "y_riesgo",
-  "num_cols": [
-    "PROCESO",
-    "CODIGO_RUC",
-    "CONVOCATORIA_PROCESO_GANADO",
-    "TotalProcesosParticipantes",
-    "CODIGO_CONTRATO",
-    "MONTO_CONTRACTUAL",
-    "MONTO_REFERENCIAL",
-    "MONTO_OFERTADO_PROMEDIO",
-    "RIESGO_OBRA"
-  ],
-  "cat_cols": [
-    "SECTOR",
-    "DEPARTAMENTO",
-    "NIVEL_GOBIERNO",
-    "OBJETO_PROCESO",
-    "NOMBREOBRA",
-    "METODO_CONTRATACION",
-    "RAZON_SOCIAL",
-    "MIEMBROS_DE_COMITE",
-    "NUMERO_CONTRATO",
-    "NOMBRE_OBRA",
-    "ESTADO_OBRA",
-    "ETAPA",
-    "RIESGO_DESCRIPCION_OBRA"
-  ],
-  "best_model": "RF",
-  "cv_pr_auc": {
-    "LogReg": 0.9575358971258472,
-    "RF": 0.9782197366208794,
-    "GB": 0.9758768174356055
-  },
-  "best_threshold_f1": 0.4361515715637239
+  "modelo": "logreg",
+  "f1": 0.3563386051656353,
+  "roc_auc": 0.49974060690428435,
+  "pr_auc": 0.3100208667902513,
+  "tiempo_seg": 473.4831805229187,
+  "folds": 5
 }

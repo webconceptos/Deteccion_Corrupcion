@@ -138,3 +138,56 @@ PS D:\IA_Investigacion\Deteccion_Corrupcion>
 PS D:\IA_Investigacion\Deteccion_Corrupcion>
 (env) .\run_semana7_full.sh
 PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) .\run_semana6_full.sh
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) .\run_semana7_full.sh
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) ls
+
+
+    Directorio: D:\IA_Investigacion\Deteccion_Corrupcion
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        06/11/2025     11:26                .github
+d-----        06/11/2025     11:26                backend-predictor
+d-----        06/11/2025     11:26                data
+d-----        06/11/2025     14:13                docs
+d-----        06/11/2025     11:31                env
+d-----        06/11/2025     11:26                frontend-predictor
+d-----        06/11/2025     11:26                logs
+d-----        06/11/2025     11:26                models
+d-----        06/11/2025     11:26                notebooks
+d-----        06/11/2025     15:52                reports
+d-----        06/11/2025     14:11                scripts
+d-----        06/11/2025     11:26                src
+d-----        06/11/2025     11:26                tests
+-a----        06/11/2025     11:26            222 .env.example
+-a----        06/11/2025     11:26            175 .gitattributes
+-a----        06/11/2025     11:26            435 .gitignore
+-a----        06/11/2025     11:26            309 docker-compose.prod.ym
+                                                  l
+-a----        06/11/2025     11:26            608 docker-compose.yaml
+-a----        06/11/2025     11:26            500 Dockerfile.prod
+-a----        06/11/2025     11:26           2935 fix-ci-lint.patch
+-a----        06/11/2025     11:26             62 LICENSE
+-a----        06/11/2025     11:26            436 Makefile
+-a----        06/11/2025     14:43           2952 push_semana.sh
+-a----        06/11/2025     11:26            225 pyproject.toml
+-a----        06/11/2025     11:26           5437 README.md
+-a----        06/11/2025     11:26           2490 README_exec.md
+-a----        06/11/2025     11:26             43 requirements-dev.txt
+-a----        06/11/2025     11:26            710 requirements.txt
+-a----        06/11/2025     12:17           7231 run_semana6_full.ps1
+-a----        06/11/2025     12:32           4359 run_semana6_full.sh
+-a----        06/11/2025     14:13           1434 run_semana7_full.sh
+-a----        06/11/2025     11:26           1168 setup_env.ps1
+-a----        06/11/2025     11:26           1502 sync_repo.ps1
+
+
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) .\push_semana.sh
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
+(env) .\push_semana.sh
+PS D:\IA_Investigacion\Deteccion_Corrupcion>
