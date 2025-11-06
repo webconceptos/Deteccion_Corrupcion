@@ -1,0 +1,63 @@
+==========================================================
+ 🧠 Semana 6 – Pipeline completo de modelado predictivo
+ Log: reports/logs/semana6_run_20251106_124200.log
+==========================================================
+
+[12:42:01] ▶️  📦 [1/9] Construyendo datasets...
+Comando: python scripts/build_dataset_ml.py && python scripts/build_dataset_integrado.py
+
+=== [1] CARGA DE FUENTES ===
+✅ Cargado DS_DASH_Obra_1A.csv                      → 326 filas, 13 cols
+✅ Cargado DS_DASH_Obra_2A_3A.csv                   → 552 filas, 23 cols
+✅ Cargado DS_DASH_Obra_2B.csv                      → 1613 filas, 7 cols
+✅ Cargado DS_DASH_Obra_3B.csv                      → 5249 filas, 21 cols
+✅ Cargado DS_DASH_Obra_3C.csv                      → 5249 filas, 9 cols
+✅ Cargado DS_DASH_Obra_4A.csv                      → 326 filas, 10 cols
+✅ Cargado DS_DASH_Obra_4B.csv                      → 326 filas, 16 cols
+✅ Cargado DS_DASH_Obra_5A.csv                      → 634 filas, 16 cols
+✅ Cargado DS_DASH_Empresa_1A.csv                   → 553 filas, 10 cols
+✅ Cargado DS_DASH_Empresa_1B.csv                   → 2148 filas, 6 cols
+✅ Cargado DS_DASH_Empresa_2A.csv                   → 371 filas, 12 cols
+✅ Cargado DS_DASH_Empresa_2B.csv                   → 5395 filas, 5 cols
+✅ Cargado DS_DASH_Empresa_2C.csv                   → 26 filas, 3 cols
+✅ Cargado DS_DASH_Miembro_1A.csv                   → 1613 filas, 11 cols
+✅ Cargado DS_DASH_Miembro_2A.csv                   → 739 filas, 9 cols
+✅ Cargado DS_DASH_Miembro_3A.csv                   → 2606 filas, 5 cols
+✅ Cargado DS_DASH_Miembro_3B.csv                   → 643 filas, 5 cols
+
+📊 Obras: (14179, 56), Empresas: (8202, 26), Funcionarios: (5317, 17)
+
+=== [2] CARGA DE PERFILAMIENTO DE RIESGO ===
+⚠️ Error leyendo perfilamiento_obra_riesgosa.xlsx: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+⚠️ Error leyendo perfilamiento_empresa_riesgosa.xlsx: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+
+=== [3] UNIFICACIÓN DE FUENTES ===
+✅ Dataset unificado temporal: 14179 filas, 56 columnas
+
+=== [4] CREACIÓN DE VARIABLE OBJETIVO (y_riesgo) ===
+✅ Etiqueta creada desde columna existente: RIESGO_OBRA
+
+=== [5] SELECCIÓN DE VARIABLES ===
+
+=== [6] LIMPIEZA FINAL ===
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\scripts\build_dataset_ml.py", line 149, in <module>
+    main()
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\scripts\build_dataset_ml.py", line 144, in main
+    df_final.to_parquet(out_file, index=False)
+  File "C:\Python312\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pandas\core\frame.py", line 3113, in to_parquet
+    return to_parquet(
+           ^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pandas\io\parquet.py", line 476, in to_parquet
+    impl = get_engine(engine)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pandas\io\parquet.py", line 67, in get_engine
+    raise ImportError(
+ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.

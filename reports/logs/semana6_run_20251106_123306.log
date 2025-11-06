@@ -1,0 +1,31 @@
+==========================================================
+ 🧠 Semana 6 – Pipeline completo de modelado predictivo
+ Log: reports/logs/semana6_run_20251106_123306.log
+==========================================================
+
+[12:33:07] ▶️  📦 [1/9] Construyendo datasets...
+Comando: python scripts/build_dataset_ml.py && python scripts/build_dataset_integrado.py
+
+=== [1] CARGA DE FUENTES ===
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\scripts\build_dataset_ml.py", line 28, in load_all_csv
+    print(f"\u2705 Cargado {f.name:40s} \u2192 {df.shape[0]} filas, {df.shape[1]} cols")
+  File "C:\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\scripts\build_dataset_ml.py", line 143, in <module>
+    main()
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\scripts\build_dataset_ml.py", line 58, in main
+    obras = load_all_csv(BASE / "obra")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IA_Investigacion\Deteccion_Corrupcion\scripts\build_dataset_ml.py", line 30, in load_all_csv
+    print(f"\u26a0\ufe0f Error en {f.name}: {e}")
+  File "C:\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>

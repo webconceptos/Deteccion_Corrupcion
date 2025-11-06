@@ -1,0 +1,9 @@
+error: pathspec 'feat/semana7-modelado' did not match any file(s) known to git
+warning: in the working copy of 'reports/logs/push_20251106_141743.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/logs/semana6_transcript_20251106_121800.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/logs/push_20251106_143459.log', LF will be replaced by CRLF the next time Git touches it
+[main d6baa25] Semana 7 - Experimentos Comparables
+ 3 files changed, 108 insertions(+)
+ create mode 100644 reports/logs/push_20251106_143459.log
+error: src refspec feat/semana7-modelado does not match any
+error: failed to push some refs to 'https://github.com/webconceptos/Deteccion_Corrupcion'
