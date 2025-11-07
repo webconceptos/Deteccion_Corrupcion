@@ -1,0 +1,25 @@
+warning: in the working copy of 'reports/logs/semana6_transcript_20251106_121800.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/logs/semana6_run_20251106_161502.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/logs/semana7_run_20251106_161625.log', LF will be replaced by CRLF the next time Git touches it
+[feat/semana7 d0f6eab] Semana 7 - Actualización - Experimentos Comparables
+ 16 files changed, 336 insertions(+), 407 deletions(-)
+ delete mode 100644 reports/logs/push_20251106_141743.log
+ delete mode 100644 reports/logs/push_20251106_143459.log
+ delete mode 100644 reports/logs/push_20251106_144353.log
+ rename reports/logs/{push_20251106_150041.log => push_20251106_161944.log} (100%)
+ delete mode 100644 reports/logs/semana6_run_20251106_123306.log
+ delete mode 100644 reports/logs/semana6_run_20251106_123541.log
+ delete mode 100644 reports/logs/semana6_run_20251106_124200.log
+ delete mode 100644 reports/logs/semana6_run_20251106_124259.log
+ delete mode 100644 reports/logs/semana6_run_20251106_145445.log
+ create mode 100644 reports/logs/semana6_run_20251106_161502.log
+ delete mode 100644 reports/logs/semana7_run_20251106_145432.log
+ create mode 100644 reports/logs/semana7_run_20251106_161625.log
+To https://github.com/webconceptos/Deteccion_Corrupcion
+ ! [rejected]        feat/semana7 -> feat/semana7 (fetch first)
+error: failed to push some refs to 'https://github.com/webconceptos/Deteccion_Corrupcion'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
