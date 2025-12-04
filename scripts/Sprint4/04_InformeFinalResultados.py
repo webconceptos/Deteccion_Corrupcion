@@ -63,7 +63,11 @@ resumen_path = os.path.join(OUTPUT_DIR, "informe_sprint4.md")
 with open(resumen_path, "w", encoding="utf-8") as f:
     f.write("# Informe Final Sprint 4\n\n")
     f.write("## Modelos Evaluados\n")
-    f.write(df_modelos.to_markdown() + "\n\n")
+    #f.write(df_modelos.to_markdown() + "\n\n")
+    try:
+        f.write(df_modelos.to_markdown() + "\n\n")
+    except:
+        f.write(df_modelos.to_string() + "\n\n")
 
     f.write("## Slices Problemáticos\n")
     f.write(df_slices.head(10).to_markdown() + "\n\n")
