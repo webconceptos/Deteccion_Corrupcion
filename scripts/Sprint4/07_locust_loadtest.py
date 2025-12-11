@@ -20,8 +20,6 @@ locust -f scripts/Sprint4/07_locust_loadtest.py --host=http://localhost:8000 ^
 
 Luego abre:
 http://localhost:8089
-
-Autor: Fer + Jarvis
 """
 
 from __future__ import annotations
