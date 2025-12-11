@@ -66,15 +66,31 @@ def setup_logger(log_path: str | Path) -> logging.Logger:
 # 2. CARGA DE DATASET
 # =============================================================
 
-def load_dataset(csv_path: str | Path) -> pd.DataFrame:
+def load_dataset(path: str | Path) -> pd.DataFrame:
     """
-    Carga un dataset CSV y retorna un DataFrame.
-    """
-    csv_path = Path(csv_path)
-    if not csv_path.exists():
-        raise FileNotFoundError(f"El dataset no existe: {csv_path}")
+    Carga dataset en CSV o Parquet automáticamente.
 
-    return pd.read_csv(csv_path)
+    - Si termina en .csv → usa pd.read_csv
+    - Si termina en .parquet → usa pd.read_parquet
+    """
+
+    path = Path(path)
+
+    if not path.exists():
+        raise FileNotFoundError(f"El dataset no existe: {path}")
+
+    if path.suffix.lower() == ".csv":
+        df = pd.read_csv(path)
+    elif path.suffix.lower() in [".parquet", ".pq"]:
+        df = pd.read_parquet(path)
+    else:
+        raise ValueError(f"Formato no soportado: {path.suffix}")
+
+    if df.empty:
+        raise ValueError(f"El dataset cargado está VACÍO: {path}")
+
+    return df
+
 
 
 # =============================================================
