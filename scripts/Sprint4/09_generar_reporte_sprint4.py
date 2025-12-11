@@ -19,8 +19,6 @@ Salida principal:
 
 Este archivo es el "corazón" del entregable Sprint 4:
 deja un informe reproducible, en texto plano, fácil de versionar en Git.
-
-Autor: Fer + Jarvis
 """
 
 from __future__ import annotations
